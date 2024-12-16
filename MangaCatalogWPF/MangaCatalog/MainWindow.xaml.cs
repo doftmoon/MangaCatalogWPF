@@ -20,5 +20,15 @@ namespace MangaCatalog
 		{
 			InitializeComponent();
 		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			
+		}
+
+		private void buttonRegister_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

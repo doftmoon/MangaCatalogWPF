@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MangaCatalog"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MangaCatalog" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen">
     <Grid>
-
+        <Button x:Name="buttonLogin" Content="Log in" HorizontalAlignment="Left" Margin="721,40,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button x:Name="buttonRegister" Content="Register" HorizontalAlignment="Left" Margin="659,40,0,0" VerticalAlignment="Top" Click="buttonRegister_Click"/>
     </Grid>
 </Window>
