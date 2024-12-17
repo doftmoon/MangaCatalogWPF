@@ -1,0 +1,25 @@
+﻿<Window x:Class="TestWPF.AddMangaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Manga" Height="200" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Title:"/>
+        <TextBox x:Name="txtTitle" Grid.Row="0" Margin="5"/>
+
+        <Label Content="Author:" Grid.Row="1"/>
+        <TextBox x:Name="txtAuthor" Grid.Row="1" Margin="5"/>
+
+        <Label Content="Rating:" Grid.Row="2"/>
+        <TextBox x:Name="txtRating" Grid.Row="2" Margin="5"/>
+
+        <Button Content="Add Manga" Click="AddManga_Click" Grid.Row="3" Margin="5"/>
+    </Grid>
+</Window>

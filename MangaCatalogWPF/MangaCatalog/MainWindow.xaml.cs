@@ -28,7 +28,7 @@ namespace MangaCatalog
 
 		private void buttonRegister_Click(object sender, RoutedEventArgs e)
 		{
-
+			//mainFrame.Navigate(new RegisterForm());
 		}
 	}
 }

@@ -5,9 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MangaCatalog"
         mc:Ignorable="d"
-        Title="MangaCatalog" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+        Title="MangaCatalog" Height="540" Width="960" WindowStartupLocation="CenterScreen" Background="#FF151515" MinWidth="480" MinHeight="270">
     <Grid>
-        <Button x:Name="buttonLogin" Content="Log in" HorizontalAlignment="Left" Margin="721,40,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button x:Name="buttonRegister" Content="Register" HorizontalAlignment="Left" Margin="659,40,0,0" VerticalAlignment="Top" Click="buttonRegister_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,16,32,0">
+            <Button x:Name="buttonLogin" Content="Log in" Click="Button_Click" Width="80" Height="40" Margin="0,0,8,0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <Button x:Name="buttonRegister" Content="Register" Click="buttonRegister_Click" Width="80" Height="40" Margin="0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Window>
