@@ -1,0 +1,26 @@
+﻿<Window x:Class="MangaCatalog.View.AddMangaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MangaCatalog.View"
+        mc:Ignorable="d"
+        Title="AddMangaWindow" Height="450" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Add Manga" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="0,16,0,16"/>
+        <StackPanel Grid.Row="1">
+            <TextBox x:Name="TitleTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" FontSize="14" Height="20" Width="120" GotFocus="TitleTextBox_GotFocus" LostFocus="TitleTextBox_LostFocus"/>
+            <TextBox x:Name="TypeTextBox" HorizontalAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" FontSize="14" Height="20" Width="120" GotFocus="TypeTextBox_GotFocus" LostFocus="TypeTextBox_LostFocus"/>
+            <TextBox x:Name="YearTextBox" HorizontalAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Text="Year" VerticalAlignment="Top" FontSize="14" Height="20" Width="120" GotFocus="YearTextBox_GotFocus" LostFocus="YearTextBox_LostFocus"/>
+            <TextBox x:Name="RateTextBox" HorizontalAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Text="Rate" VerticalAlignment="Top" FontSize="14" Height="20" Width="120" GotFocus="RateTextBox_GotFocus" LostFocus="RateTextBox_LostFocus"/>
+            <TextBox x:Name="AuthorTextBox" HorizontalAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Text="Author" VerticalAlignment="Top" FontSize="14" Height="20" Width="120" GotFocus="AuthorTextBox_GotFocus" LostFocus="AuthorTextBox_LostFocus"/>
+            <TextBox x:Name="DescriptionTextBox" TextWrapping="Wrap" Text="Description" FontSize="14" Height="80" Width="200" Margin="0,20,0,0" GotFocus="DescriptionTextBox_GotFocus" LostFocus="DescriptionTextBox_LostFocus"/>
+            <Button x:Name="addMangaButton" Content="Add" Margin="0,30,0,0" Width="100" Height="20" FontSize="14" Click="addMangaButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

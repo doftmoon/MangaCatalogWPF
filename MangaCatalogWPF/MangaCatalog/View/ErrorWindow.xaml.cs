@@ -10,19 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MangaCatalog
+namespace MangaCatalog.View
 {
-    /// <summary>
-    /// Interaction logic for RegisterForm.xaml
-    /// </summary>
-    public partial class RegisterForm : Page
-    {
-        public RegisterForm()
-        {
-            InitializeComponent();
-        }
-    }
+	/// <summary>
+	/// Interaction logic for ErrorWindow.xaml
+	/// </summary>
+	public partial class ErrorWindow : Window
+	{
+		public ErrorWindow()
+		{
+			InitializeComponent();
+		}
+	}
 }

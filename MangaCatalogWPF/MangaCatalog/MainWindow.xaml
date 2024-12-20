@@ -5,20 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MangaCatalog"
         mc:Ignorable="d"
-        Title="MangaCatalog" Height="540" Width="960" WindowStartupLocation="CenterScreen" Background="#FF151515" MinWidth="480" MinHeight="270">
+        Title="MangaCatalog" Height="540" Width="960" WindowStartupLocation="CenterScreen" Background="#FFEBEBEB" MinWidth="480" MinHeight="270" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,16,32,0">
+        <Button x:Name="buttonCatalog" Grid.Row="0" Grid.Column="0" Content="Catalog" Click="buttonCatalog_Click" Width="80" Height="40" Margin="32,16,0,0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+
+        <StackPanel x:Name="guessNav" Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,16,32,0">
             <Button x:Name="buttonLogin" Content="Log in" Click="Button_Click" Width="80" Height="40" Margin="0,0,8,0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
-            <Button x:Name="buttonRegister" Content="Register" Click="buttonRegister_Click" Width="80" Height="40" Margin="0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <Button x:Name="buttonRegister" Content="Sigh up" Click="buttonRegister_Click" Width="80" Height="40" Margin="0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
         </StackPanel>
+
+        <StackPanel x:Name="userNav" Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,16,32,0" Visibility="Hidden">
+            <Button x:Name="buttonBookmarks" Content="Bookmarks" Click="buttonBookmarks_Click" Width="80" Height="40" Margin="0,0,8,0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <Button x:Name="buttonLogout" Content="Logout" Click="buttonLogout_Click" Width="80" Height="40" Margin="0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel x:Name="adminNav" Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,16,32,0" Visibility="Hidden">
+            <Button x:Name="buttonAddManga" Content="AddManga" Click="AddManga_Click" Width="80" Height="40" Margin="0,0,8,0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <Button x:Name="buttonRemoveManga" Content="ToggleRemove" Click="ToggleRemoveMangaFlag_Click" Width="100" Height="40" Margin="0,0,8,0" MinWidth="40" MinHeight="20" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Frame x:Name="PageContainer" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden" Margin="16,32,16,20"/>
+        <TextBox x:Name="searchTextBox" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Search" VerticalAlignment="Center" Width="200" FontSize="16" Height="30" Margin="0,10,0,0" TextChanged="searchTextBox_TextChanged" GotFocus="searchTextBox_GotFocus"/>
     </Grid>
 </Window>

@@ -6,12 +6,12 @@ namespace TestWPF
 {
 	public partial class AddMangaWindow : Window
 	{
-		private MainWindow mainWindow;
+		private CatalogPage catalogPage;
 
-		public AddMangaWindow(MainWindow main)
+		public AddMangaWindow(CatalogPage main)
 		{
 			InitializeComponent();
-			mainWindow = main;
+			catalogPage = main;
 		}
 
 		private void AddManga_Click(object sender, RoutedEventArgs e)
@@ -26,7 +26,7 @@ namespace TestWPF
 					ImagePath = "manga.jpg"
 				};
 
-				mainWindow.MangaList.Add(newManga);
+				catalogPage.MangaList.Add(newManga);
 				Close();
 			}
 			else
